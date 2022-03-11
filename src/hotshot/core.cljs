@@ -1,4 +1,4 @@
-(ns capy.bara
+(ns hotshot.core
   (:require [reagent.core :as reagent]
             [reagent.dom :as reagent-dom]))
 
@@ -6,8 +6,11 @@
 
 (defn my-first-component []
   [:section
-   [:div "counter:" (:i @state)]
-   [:button {:on-click #(swap! state update :i inc)} "+"]])
+   [:div "Counter:" (:i @state)]
+   [:div
+    [:button {:on-click #(swap! state update :i inc)} "Inc"]]
+   [:div
+    [:button {:on-click #(swap! state update :i dec)} "Dec"]]])
 
 (reagent-dom/render [my-first-component]
                     (js/document.getElementById "app"))
