@@ -1,8 +1,8 @@
-(ns hotshot.core
+(ns frontend.core
   (:require [reagent.core :as reagent]
             [reagent.dom :as reagent-dom]))
 
-(def state (reagent/atom {:i 0}))
+(def state (reagent/atom {:i 1}))
 
 (defn my-first-component []
   [:section

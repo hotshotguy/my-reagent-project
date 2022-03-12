@@ -4,3 +4,6 @@ node_modules
 .shadow-cljs
 node_modules
 resources/public/out
+/.calva/
+/.clj-kondo/
+/.lsp/
